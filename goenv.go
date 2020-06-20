@@ -85,3 +85,7 @@ func Float32(key string, def float32) (float32, error) {
 func Float64(key string, def float64) (float64, error) {
 	return strconv.ParseFloat(String(key, fmt.Sprintf("%f", def)), 64)
 }
+
+func Bytes(key string, def []byte) []byte {
+	return []byte(String(key, string(def)))
+}

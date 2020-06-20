@@ -8,6 +8,7 @@ import (
 func main() {
 	println(goenv.String("STRING", "fart")) //<< should be fart
 	println(goenv.Bool("BOOL", false)) //<< should be false
+	println(goenv.Bytes("BYTES", []byte("foo"))) //<< should be foo
 
 	f32, err := goenv.Float32("FLOAT32", 0)
 
@@ -83,6 +84,7 @@ func main() {
 	vars := map[string]string{
 		"STRING":  "poop",
 		"BOOL":    "1",
+		"BYTES":   "bar",
 		"FLOAT32": "420.69",
 		"FLOAT64": "666.69",
 		"INT":     "-420",
@@ -105,6 +107,7 @@ func main() {
 
 	println(goenv.String("STRING", "fart")) //<< should be poop
 	println(goenv.Bool("BOOL", false)) //<< should be true
+	println(goenv.Bytes("BYTES", []byte("foo"))) //<< should be bar
 
 	f32, err = goenv.Float32("FLOAT32", 0)
 
