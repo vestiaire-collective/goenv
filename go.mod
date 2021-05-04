@@ -1,3 +1,3 @@
-module github.com/chaseisabelle/goenv
+module github.com/vestiaire-collective/goenv
 
 go 1.14
