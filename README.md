@@ -10,7 +10,7 @@ a small package for reading env vars by type
 package main
 
 import (
-	"github.com/chaseisabelle/goenv"
+	"github.com/vestiaire-collective/goenv"
 	"os"
 )
 

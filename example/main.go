@@ -1,13 +1,14 @@
 package main
 
 import (
-	"github.com/chaseisabelle/goenv"
 	"os"
+
+	"github.com/vestiaire-collective/goenv"
 )
 
 func main() {
-	println(goenv.String("STRING", "fart")) //<< should be fart
-	println(goenv.Bool("BOOL", false)) //<< should be false
+	println(goenv.String("STRING", "fart"))      //<< should be fart
+	println(goenv.Bool("BOOL", false))           //<< should be false
 	println(goenv.Bytes("BYTES", []byte("foo"))) //<< should be foo
 
 	f32, err := goenv.Float32("FLOAT32", 0)
@@ -72,11 +73,11 @@ func main() {
 
 	println(f32) //<< should be 0
 	println(f64) //<< should be 0
-	println(i) //<< should be 0
+	println(i)   //<< should be 0
 	println(i32) //<< should be 0
 	println(i64) //<< should be 0
-	println(u) //<< should be 0
-	println(u8) //<< should be 0
+	println(u)   //<< should be 0
+	println(u8)  //<< should be 0
 	println(u16) //<< should be 0
 	println(u32) //<< should be 0
 	println(u64) //<< should be 0
@@ -105,8 +106,8 @@ func main() {
 		}
 	}
 
-	println(goenv.String("STRING", "fart")) //<< should be poop
-	println(goenv.Bool("BOOL", false)) //<< should be true
+	println(goenv.String("STRING", "fart"))      //<< should be poop
+	println(goenv.Bool("BOOL", false))           //<< should be true
 	println(goenv.Bytes("BYTES", []byte("foo"))) //<< should be bar
 
 	f32, err = goenv.Float32("FLOAT32", 0)
@@ -171,11 +172,11 @@ func main() {
 
 	println(f32) //<< should be 420.69
 	println(f64) //<< should be 666.69
-	println(i) //<< should be -420
+	println(i)   //<< should be -420
 	println(i32) //<< should be -69
 	println(i64) //<< should be -666
-	println(u) //<< should be 420
-	println(u8) //<< should be 8
+	println(u)   //<< should be 420
+	println(u8)  //<< should be 8
 	println(u16) //<< should be 16
 	println(u32) //<< should be 32
 	println(u64) //<< should be 64
